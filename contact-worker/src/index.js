@@ -1,7 +1,7 @@
 const ALLOWED_ORIGINS = [
 	'https://boldcityconstruction.com',
 	'https://www.boldcityconstruction.com',
-	'https://rturga1p.github.io',
+	'https://rturgalp.github.io',
 ];
 
 const TO_EMAIL = 'luisvar7119@gmail.com';

@@ -17,8 +17,8 @@ module.exports = {
       state: 'FL',
       zip: '32258',
     },
-    license: 'CGC1523929',
-    licenseTitle: 'Florida Certified General Contractor',
+    license: '',
+    licenseTitle: '',
     owner: 'Anis Serjani',
     foundedYear: 2016,
     copyrightYear: 2025,
@@ -38,11 +38,11 @@ module.exports = {
 
   // ── SEO & Meta ─────────────────────────────────────────────────
   seo: {
-    title: 'Bold City Construction & Handyman Services | Jacksonville FL Certified General Contractor',
-    description: 'Bold City Construction & Handyman Services LLC — Florida Certified General Contractor (CGC1523929) serving Jacksonville & Duval County since 2016. Free estimates for remodeling, construction & handyman services. Call (904) 553-8871.',
-    keywords: 'Jacksonville contractor, handyman services Jacksonville, home remodeling Jacksonville FL, certified general contractor Jacksonville, residential construction Duval County, kitchen remodeling Jacksonville, bathroom renovation Jacksonville FL, home repair Jacksonville',
-    ogDescription: 'Florida Certified General Contractor serving Jacksonville since 2016. No job too big or small — from handyman repairs to whole home makeovers. Free estimates!',
-    twitterDescription: 'Certified General Contractor in Jacksonville FL. Remodeling, construction & handyman services. Call (904) 553-8871 for a free estimate.',
+    title: 'Bold City Construction & Handyman Services | Jacksonville FL',
+    description: 'Bold City Construction & Handyman Services LLC — serving Jacksonville & Duval County since 2016. Free estimates for remodeling, construction & handyman services. Call (904) 553-8871.',
+    keywords: 'Jacksonville contractor, handyman services Jacksonville, home remodeling Jacksonville FL, construction Jacksonville, kitchen remodeling Jacksonville, bathroom renovation Jacksonville FL, home repair Jacksonville, interior painting Jacksonville',
+    ogDescription: 'Serving Jacksonville since 2016. No job too big or small — from handyman repairs to whole home makeovers. Free estimates!',
+    twitterDescription: 'Construction & handyman services in Jacksonville FL. Remodeling, painting & more. Call (904) 553-8871 for a free estimate.',
     canonicalUrl: 'https://boldcityconstructionjax.com/',
     geo: {
       region: 'US-FL',
@@ -66,7 +66,7 @@ module.exports = {
     headline: "Jacksonville's Trusted<br>Construction & Handyman Pros",
     subtext: 'No job too big or too small. From a quick repair to a whole home makeover — we make your vision come to life.',
     badges: [
-      'Licensed & Insured',
+      'Insured',
       '10+ Years Experience',
       'Free Estimates',
     ],
@@ -77,12 +77,6 @@ module.exports = {
     heading: 'Our Services',
     subheading: 'From small repairs to major renovations — we handle it all with expert craftsmanship.',
     items: [
-      {
-        title: 'Residential Construction',
-        description: 'New builds, additions, and structural work backed by our Florida General Contractor license.',
-        features: ['New home construction', 'Room additions', 'Structural modifications', 'General contracting'],
-        icon: 'home',
-      },
       {
         title: 'Home Remodeling',
         description: 'Transform your living space with kitchen, bathroom, and whole-home renovations.',
@@ -109,8 +103,8 @@ module.exports = {
       },
       {
         title: 'Outdoor & Exterior',
-        description: 'Decks, patios, fencing, and exterior upgrades to enhance your outdoor living space.',
-        features: ['Deck construction', 'Patio installation', 'Fence building', 'Exterior repairs'],
+        description: 'Decks, patios, and exterior upgrades to enhance your outdoor living space.',
+        features: ['Deck construction', 'Patio installation', 'Exterior repairs'],
         icon: 'shield',
       },
     ],
@@ -122,8 +116,8 @@ module.exports = {
     subheading: 'Trusted by families across Duval County for over a decade.',
     items: [
       {
-        title: 'Licensed & Insured',
-        description: 'Florida Certified General Contractor (CGC1523929). Your project is protected and handled by qualified professionals.',
+        title: 'Insured',
+        description: 'Your project is protected and handled by experienced professionals.',
         icon: 'shield-check',
       },
       {
@@ -214,7 +208,6 @@ module.exports = {
     formAction: 'https://formspree.io/f/your-form-id', // Replace with your Formspree ID
     formNote: 'We typically respond within a few hours during business days.',
     serviceOptions: [
-      { value: 'residential-construction', label: 'Residential Construction' },
       { value: 'home-remodeling', label: 'Home Remodeling' },
       { value: 'kitchen-remodel', label: 'Kitchen Remodel' },
       { value: 'bathroom-renovation', label: 'Bathroom Renovation' },
@@ -229,10 +222,10 @@ module.exports = {
   // ── Footer ─────────────────────────────────────────────────────
   footer: {
     serviceLinks: [
-      'Residential Construction',
       'Home Remodeling',
       'Handyman Services',
       'Interior Painting',
+      'Flooring & Tile',
     ],
     companyLinks: [
       { label: 'Why Choose Us', href: '#why-us' },

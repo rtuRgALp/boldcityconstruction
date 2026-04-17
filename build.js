@@ -97,9 +97,9 @@ function buildJsonLd() {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": business.name,
-    "description": `${business.licenseTitle} serving ${business.address.city} & Duval County since ${business.foundedYear}. Residential construction, remodeling, and handyman services.`,
+    "description": `Serving ${business.address.city} & Duval County since ${business.foundedYear}. Remodeling, handyman services, painting, and more.`,
     "url": seo.canonicalUrl.replace(/\/$/, ''),
-    "telephone": business.phoneRaw.replace(/(\d)(\d{3})(\d{3})(\d{4})/, '+$1-$2-$3-$4'),
+    "telephone": `+1-${business.phone.replace(/[^\d]/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3')}`,
     "email": business.email,
     "address": {
       "@type": "PostalAddress",
@@ -121,12 +121,6 @@ function buildJsonLd() {
     },
     "founder": { "@type": "Person", "name": business.owner },
     "foundingDate": String(business.foundedYear),
-    "hasCredential": {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "license",
-      "name": business.licenseTitle,
-      "recognizedBy": { "@type": "Organization", "name": "State of Florida" }
-    },
     "priceRange": "$$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -195,7 +189,7 @@ const html = `<!DOCTYPE html>
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="container top-bar-inner">
-      <span>${esc(business.licenseTitle)} — License #${esc(business.license)}</span>
+      <span>${esc(business.name)}</span>
       <a href="tel:${esc(business.phoneRaw)}">Call Now: ${esc(business.phone)}</a>
     </div>
   </div>
@@ -401,7 +395,7 @@ const html = `<!DOCTYPE html>
       </div>
       <div class="footer-bottom">
         <p>&copy; ${business.copyrightYear} ${esc(business.name)}. All rights reserved.</p>
-        <p>${esc(business.licenseTitle)} — License #${esc(business.license)} | ${esc(business.address.city)}, ${esc(business.address.state)} ${esc(business.address.zip)}</p>
+        <p>${esc(business.address.city)}, ${esc(business.address.state)} ${esc(business.address.zip)}</p>
       </div>
     </div>
   </footer>

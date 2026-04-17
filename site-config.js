@@ -31,9 +31,7 @@ module.exports = {
         closes: '18:00',
       },
     },
-    social: {
-      facebook: 'https://www.facebook.com/boldcityconstruction/',
-    },
+    social: {},
   },
 
   // ── SEO & Meta ─────────────────────────────────────────────────

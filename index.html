@@ -416,7 +416,7 @@
           <p>Tell us about your project and we'll get back to you within 24 hours.</p>
         </div>
         <div class="contact-grid">
-          <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST" aria-label="Request a free estimate">
+          <form class="contact-form" id="contact-form" aria-label="Request a free estimate">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Full Name *</label>
@@ -563,6 +563,47 @@
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
+    });
+  </script>
+  <script>
+    // Contact form submission
+    const WORKER_URL = 'https://bold-city-contact.luisvar7119.workers.dev';
+
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      try {
+        const data = {
+          name: this.querySelector('#name').value,
+          phone: this.querySelector('#phone').value,
+          email: this.querySelector('#email').value,
+          service: this.querySelector('#service').value,
+          message: this.querySelector('#message').value,
+        };
+
+        const res = await fetch(WORKER_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+          btn.textContent = 'Sent! We\'ll be in touch.';
+          btn.style.backgroundColor = '#16a34a';
+          this.reset();
+          setTimeout(() => { btn.textContent = originalText; btn.style.backgroundColor = ''; btn.disabled = false; }, 4000);
+        } else {
+          throw new Error('Send failed');
+        }
+      } catch (err) {
+        btn.textContent = 'Error — please call (904) 553-8871';
+        btn.style.backgroundColor = '#dc2626';
+        setTimeout(() => { btn.textContent = originalText; btn.style.backgroundColor = ''; btn.disabled = false; }, 4000);
+      }
     });
   </script>
 </body>
